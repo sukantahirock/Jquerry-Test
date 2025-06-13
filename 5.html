@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Style Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .style1 {
+            background-color: yellow;
+            color: black;
+        }
+
+        .style2 {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p id="element" class="style1">This is a paragraph with style1.</p>
+    <button id="toggleButton">Toggle Style</button>
+
+    <script>
+        $(document).ready(function() {
+            $("#toggleButton").click(function() {
+                $("#element").toggleClass("style1 style2");
+            });
+        });
+    </script>
+</body>
+</html>

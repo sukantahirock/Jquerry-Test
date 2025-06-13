@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle</title>
+    <!-- Include jQuery library from a CDN (Content Delivery Network) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p id="element" style="background-color: yellow; color: black;">Enjoy</p>
+    <button id="toggleButton">Toggle</button>
+
+    <script>
+        $(document).ready(function() {
+            var isStyle1 = true;
+
+            $("#toggleButton").click(function() {
+                if (isStyle1) {
+                    $("#element").css({
+                        "background-color": "blue",
+                        "color": "white"
+                    });
+                } else {
+                    $("#element").css({
+                        "background-color": "yellow",
+                        "color": "black"
+                    });
+                }
+
+                isStyle1 = !isStyle1;
+            });
+        });
+    </script>
+</body>
+</html>

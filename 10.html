@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Length</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <textarea id="textArea" rows="4" cols="50" placeholder="Enter text here"></textarea>
+    <p id="textLengthResult">Character Count: 0</p>
+    <progress id="file" value="0" max="100"> 32% </progress>
+
+    <script>
+        $(document).ready(function() {
+            // Handle the input event for the textarea
+            $("#textArea").on("input", function() {
+                // Get the text entered in the textarea
+                var textareaText = $(this).val();
+
+                // Get the character count
+                var characterCount = textareaText.length;
+
+                // Display the character count in the paragraph
+                $("#textLengthResult").text("Character Count: " + characterCount);
+
+                // Update the progress bar (adjust the max value as needed)
+                $("#file").val((characterCount / 2)); // Divide by 2 to control the progress
+            });
+        });
+    </script>
+</body>
+</html>

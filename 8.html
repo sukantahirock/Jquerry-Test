@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Length Example</title>
+</head>
+<body>
+    <textarea id="textArea" rows="4" cols="50" placeholder="Enter text here"></textarea>
+    <button id="displayLengthButton" onclick="displayTextLength()">Display Text Length</button>
+    <p id="textLengthResult"></p>
+
+    <script>
+        function displayTextLength() {
+            // Get the text entered in the textarea
+            var textareaText = document.getElementById("textArea").value;
+
+            // Get the length of the text
+            var textLength = textareaText.length;
+
+            // Display the text length in a paragraph
+            document.getElementById("textLengthResult").textContent = "Text Length: " + textLength;
+        }
+    </script>
+</body>
+</html>

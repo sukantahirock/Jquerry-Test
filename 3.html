@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="show">Show</button>
+    <div id="welcome" style="display: none;">
+        Welcome!
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            
+            $("#show").click(function() {
+                $("#welcome").show();
+            });
+        });
+    </script>
+</body>
+</html>

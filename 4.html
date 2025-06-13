@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Background Color Example</title>
+    <!-- Include jQuery library from a CDN (Content Delivery Network) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* CSS to set the initial background color */
+        input[type="text"] {
+            background-color: yellow; /* Initial background color for all text fields */
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="textbox1">
+    <input type="text" id="textbox2">
+    <input type="text" id="textbox3">
+    <input type="text" id="textbox4">
+    <input type="text" id="textbox5">
+
+    <!-- jQuery code goes here -->
+    <script>
+        $(document).ready(function() {
+            var clickCounter = 0;
+
+            // Handle the click event for all input textboxes
+            $("input[type='text']").click(function() {
+                clickCounter++;
+
+                // Set background color based on the click counter
+                switch (clickCounter) {
+                    case 1:
+                        $(this).css("background-color", "yellow");
+                        break;
+                    case 2:
+                        $(this).css("background-color", "green");
+                        break;
+                    case 3:
+                        $(this).css("background-color", "pink");
+                        break;
+                    case 4:
+                        $(this).css("background-color", "blue");
+                        break;
+                    default:
+                        // Reset the counter to yellow if more than 4 text boxes are clicked
+                        clickCounter = 1;
+                        $("input[type='text']").css("background-color", "yellow");
+                        $(this).css("background-color", "yellow");
+                        break;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Length Example</title>
+</head>
+<body>
+    <textarea id="textArea" rows="4" cols="50" placeholder="Enter text here" oninput="updateCharacterCount()"></textarea>
+    <p id="textLengthResult">Character Count: 0</p>
+
+    <script>
+        function updateCharacterCount() {
+            // Get the text entered in the textarea
+            var textareaText = document.getElementById("textArea").value;
+
+            // Get the character count
+            var characterCount = textareaText.length;
+
+            // Display the character count in the paragraph
+            document.getElementById("textLengthResult").textContent = "Character Count: " + characterCount;
+        }
+    </script>
+</body>
+</html>

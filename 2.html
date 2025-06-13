@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Example</title>
+    <!-- Include jQuery library from a CDN (Content Delivery Network) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p class="common-style">ct1.</p>
+    <p class="common-style">ct2.</p>
+    <p class="common-style">ct3.</p>
+
+    <!-- jQuery code goes here -->
+    <script>
+        $(document).ready(function() {
+            // Select all paragraphs with the class "common-style" and apply styles
+            $(".common-style").css({
+                "font-size": "16px",
+                "font-family": "Arial, sans-serif",
+                "background-color": "#FFC0CB"
+            });
+        });
+    </script>
+</body>
+</html>
